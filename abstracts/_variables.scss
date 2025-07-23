@@ -4,9 +4,6 @@
 // BREAKPOINTS
 // =====================
 $breakpoints: (
-  3xs : 16rem,
-  2xs : 18rem,
-  xs  : 20rem,
   sm  : 36rem,
   md  : 48rem,
   lg  : 62rem,
@@ -14,18 +11,29 @@ $breakpoints: (
   2xl : 87.5rem
 );
 
+$container-max-widths: (
+  sm   : 33.75rem,
+  md   : 45rem,
+  lg   : 60rem,
+  xl   : 71.25rem,
+  2xl  : 82.5
+);
+
+$container-padding: calc(1.5rem * 0.5);
+
 // =====================
 // FONTS FAMILY
 // =====================
-$font-system: '';
-$font-mono-system: '';
-$font-sans: '';
-$font-serif: '';
-$font-mono: '';
+$font-system        : 'ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"';
+$font-mono-system   : 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace';
+
+$font-sans          : "Noto Sans", sans-serif;
+$font-serif         : "Noto Serif", serif;
+$font-mono          : "Noto Sans Mono", monospace;
 
 /* 
 ==========================================
-   TYPE SCALE FONT SIZE
+  TYPE SCALE FONT SIZE
 >------------------------------------<
 Common Types of Scale Ratios
 Some common ratios often used in design:
@@ -41,7 +49,7 @@ Some common ratios often used in design:
 ==========================================
 */
 
-$fs-base    : 14px;
+$fs-base      : 16px;
 $scale-ratio  : 1.067;
 
 @function scale($step) { @return math.div( math.div(math.round($text-base * pow($scale-ratio, $step) * 100), 100), $text-base) * 1rem;}

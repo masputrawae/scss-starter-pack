@@ -1,15 +1,15 @@
-/* =====================
-   FLEX UTILITIES
-   ===================== */
+// =====================
+// FLEX UTILITIES
+// =====================
 @mixin flex-justify($justify: center, $align: center) {
   display: flex;
   justify-content: $justify;
   align-items: $align;
 }
 
-/* =====================
-   FULL SCREEN UTILITY
-   ===================== */
+// =====================
+// FULL SCREEN UTILITY
+// =====================
 @mixin full-screen {
   position: fixed;
   inset: 0;
@@ -17,57 +17,57 @@
   height: 100dvh;
 }
 
-/* =====================
-   TOKEN GENERATOR
-   ===================== */
+// =====================
+// TOKEN GENERATOR
+// =====================
 @mixin theme-vars($map) {
   @each $key, $value in $map {
     --#{$key}: #{$value};
   }
 }
 
-/* =====================
-   TRANSITION UTILITY
-   ===================== */
+// =====================
+// TRANSITION UTILITY
+// =====================
 @mixin transition($properties...) {
   transition:  $properties, 0.3s ease-in-out;
 }
 
-/* =====================
-   TEXT ELLIPSIS
-   ===================== */
+// =====================
+// TEXT ELLIPSIS
+// =====================
 @mixin text-ellipsis {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-/* =====================
-   WIDTH & HEIGHT
-   ===================== */
+// =====================
+// WIDTH & HEIGHT
+// =====================
 @mixin width-height($w, $h) {
   width: $w;
   height: $h;
 }
 
-/* =====================
-   SIZE (SQUARE)
-   ===================== */
+// =====================
+// SIZE (SQUARE)
+// =====================
 @mixin size($size) {
   @include size($size, $size);
 }
 
-/* =====================
-   CIRCLE
-   ===================== */
+// =====================
+// CIRCLE
+// =====================
 @mixin circle($size) {
   @include size($size);
   border-radius: 50%;
 }
 
-/* =====================
-   BEFORE & AFTER UTILITY
-   ===================== */
+// =====================
+// BEFORE & AFTER UTILITY
+// =====================
 @mixin before-after($option, $content: "", $position: absolute) {
   @if $option == "before" or $option == "after" {
     &::#{$option} {
@@ -80,9 +80,9 @@
   }
 }
 
-/* =====================
-   VISUALLY HIDDEN (A11Y)
-   ===================== */
+// =====================
+// VISUALLY HIDDEN (A11Y)
+// =====================
 @mixin visually-hidden {
   position: absolute !important;
   width: 1px;
@@ -92,9 +92,9 @@
   white-space: nowrap;
 }
 
-/* =====================
-   HOVER & FOCUS STATE
-   ===================== */
+// =====================
+// HOVER & FOCUS STATE
+// =====================
 @mixin hover-focus {
   &:hover,
   &:focus {
@@ -102,9 +102,9 @@
   }
 }
 
-/* =====================
-   SCROLL BAR CUSTOM
-   ===================== */
+// =====================
+// SCROLL BAR CUSTOM
+// =====================
 @mixin custom-scrollbar($track, $thumb) {
   scrollbar-width: thin;
   scrollbar-color: $thumb $track;
